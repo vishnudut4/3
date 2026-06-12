@@ -1,1 +1,139 @@
-customer/order.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Order Tea</title>
+
+<style>
+body{
+font-family:Arial;
+padding:20px;
+background:#f4f4f4;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+}
+
+.cups{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-top:15px;
+}
+
+.cup-btn{
+padding:20px;
+font-size:24px;
+background:#ff9800;
+color:white;
+border:none;
+border-radius:10px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:15px;
+font-size:18px;
+}
+
+.order-btn{
+width:100%;
+padding:15px;
+margin-top:15px;
+font-size:20px;
+background:green;
+color:white;
+border:none;
+border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2 id="vendorName">Tea Vendor</h2>
+
+<p>Select Cups</p>
+
+<div class="cups">
+
+<button class="cup-btn" onclick="placeOrder(1)">1</button>
+<button class="cup-btn" onclick="placeOrder(2)">2</button>
+<button class="cup-btn" onclick="placeOrder(3)">3</button>
+<button class="cup-btn" onclick="placeOrder(4)">4</button>
+
+<button class="cup-btn" onclick="placeOrder(5)">5</button>
+<button class="cup-btn" onclick="placeOrder(6)">6</button>
+<button class="cup-btn" onclick="placeOrder(7)">7</button>
+
+</div>
+
+<input
+id="customQty"
+type="number"
+placeholder="More than 7 cups">
+
+<button
+class="order-btn"
+onclick="customOrder()">
+
+Place Order
+
+</button>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const vendorId = params.get('vendor');
+
+document.getElementById('vendorName').innerText =
+"Vendor ID : " + vendorId;
+
+function placeOrder(cups){
+
+alert(
+"Order Sent\\nVendor ID: "
++ vendorId +
+"\\nCups: " +
+cups
+);
+
+}
+
+function customOrder(){
+
+const qty =
+document.getElementById('customQty').value;
+
+if(!qty){
+
+alert("Enter quantity");
+
+return;
+
+}
+
+alert(
+"Order Sent\\nVendor ID: "
++ vendorId +
+"\\nCups: " +
+qty
+);
+
+}
+
+</script>
+
+</body>
+</html>
