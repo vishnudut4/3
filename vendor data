@@ -1,1 +1,14 @@
-vendors.json
+[
+  {
+    "id": 1,
+    "name": "Raju Tea Stall",
+    "city": "Rajsamand",
+    "price": 10
+  },
+  {
+    "id": 2,
+    "name": "Sharma Tea Point",
+    "city": "Rajsamand",
+    "price": 12
+  }
+]
