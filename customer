@@ -55,7 +55,7 @@ html += `
 
 <p>Tea Price: ₹${vendor.price}</p>
 
-<a href="../vendor/order.html?vendor=${vendor.id}">
+<a href="order.html?vendor=${vendor.id}">
 <button>Order Tea</button>
 </a>
 
