@@ -1,1 +1,6 @@
-orders.json
+{
+  "orderId": 101,
+  "vendorId": 1,
+  "cups": 5,
+  "status": "pending"
+}
